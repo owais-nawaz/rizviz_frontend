@@ -1,0 +1,17 @@
+.homepage {
+  padding: 20px;
+  flex: 1;
+}
+
+.hero-section {
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  color: gold;
+  font-size: 2.5rem;
+}

@@ -1,0 +1,117 @@
+.header {
+  background-color: #000; /* Dark background */
+  padding: 0; /* No padding */
+  width: 100%; /* Full width */
+  z-index: 999; /* Ensure it appears above other content */
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Stick to the top of the viewport */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for box-shadow */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; /* Center content inside navbar */
+  padding: 5px 20px; /* Space inside the navbar */
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px; /* Gap between navigation links */
+}
+
+.navbar-logo {
+  position: absolute; /* Make the logo position absolute */
+  left: 50%; /* Shift to the middle horizontally */
+  transform: translateX(-50%); /* Center the logo precisely */
+}
+
+.logo-image {
+  height: 45px; /* Adjust logo height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Icon styles */
+.navbar-icons {
+  display: flex; /* Use flexbox to align icons */
+  align-items: center; /* Center icons vertically */
+  gap: 25px; /* Space between icons */
+  padding-right: 40px; /* Right padding */
+}
+
+/* Common icon styles */
+.icon {
+  color: gold; /* Default color for icons */
+  font-size: 1.5rem; /* Size of the icons */
+  position: relative; /* Position relative for pseudo-element */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* On hover, change color of icons */
+.icon:hover {
+  color: goldenrod; /* Highlighted color when hovered */
+}
+
+/* Underline effect for icons */
+.icon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: gold;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Show underline on hover */
+.icon:hover::after {
+  transform: scaleX(1); /* Show the underline */
+}
+
+/* Link styles */
+.navbar-links a {
+  color: gold; /* Default link color */
+  font-size: 1.1rem; /* Link font size */
+  font-weight: 100;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none; /* Remove underline by default */
+  position: relative; /* Position relative for pseudo-element */
+  padding-bottom: 5px; /* Space between text and underline (on hover) */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* On hover, change color and show underline */
+.navbar-links a:hover {
+  color: goldenrod; /* Highlighted color when hovered */
+}
+
+/* Underline effect for links */
+.navbar-links a::after {
+  content: ""; /* Empty content */
+  display: block; /* Make it a block element */
+  width: 100%; /* Full width */
+  height: 2px; /* Thickness of the underline */
+  background: goldenrod; /* Color of the underline */
+  position: absolute; /* Position it absolutely */
+  left: 0; /* Align to the left */
+  bottom: 0; /* Position the underline directly under the text */
+  transform: scaleX(0); /* Start scaled down to 0 (hidden) */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Scale the underline to full width on hover */
+.navbar-links a:hover::after {
+  transform: scaleX(1); /* Show the underline */
+}
+
+/* Add a smaller shadow on scroll, if you want */
+.header.sticky {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Shadow changes on scroll */
+}
