@@ -2,7 +2,7 @@ import img1 from "../assets/Carousel/img1.jpg";
 import img2 from "../assets/Carousel/img2.jpg";
 import img3 from "../assets/Carousel/img3.jpg";
 
-export const carouselData = [
+export const CarouselData = [
   {
     image: img1,
     link: "catalog",
