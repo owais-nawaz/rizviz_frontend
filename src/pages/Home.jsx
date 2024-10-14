@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 import Carousel2 from "../components/Carousel";
-import { CarouselData } from "../data/CarouselData.js";
+import { CarouselData } from "../data/carouselData.js";
 
 function Home() {
   return (
